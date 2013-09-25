@@ -217,24 +217,24 @@ int main(int argc, char**argv)
 {
   char str[]="hello";
   char dict[]="djqwertyuioplkhgfsazxcvbnm";
-  printf("strlen: %d\t sizeof: %d\n", strlen(dict), sizeof(dict));
+  printf("strlen: %lu\t sizeof: %lu\n", strlen(dict), sizeof(dict));
   printf("dict: %s\n", dict);
   printf("str: %s\n", str);
   sort_str_dict(str, dict);
-  //int arr[]={2,3,9,1,0,6, 20, 22, 8, 5, 40, 100, 7};
+  int arr[]={2,3,9,1,0,6, 20, 22, 8, 5, 40, 100, 7};
 
-  int arr[]={2,3,1,0,6, 20, 22, 8};
-  printf("arr size: %d, int size: %d,  len: %d\n", sizeof(arr), sizeof(int), sizeof(arr)/sizeof(int));
+  //int arr[]={2,3,1,0,6, 20, 22, 8};
+  printf("arr size: %lu, int size: %lu,  len: %lu\n", sizeof(arr), sizeof(int), sizeof(arr)/sizeof(int));
   //sort_bubble(arr, sizeof(arr)/sizeof(int));
   //sort_merge(arr, sizeof(arr)/sizeof(int));
 
-  //sort_quick(arr, 0, (sizeof(arr)/sizeof(int)-1));
+  sort_quick(arr, 0, (sizeof(arr)/sizeof(int)-1));
   //quickSort(arr, 0, (sizeof(arr)/sizeof(int)-1));
-  //for(int i=0; i<( sizeof(arr)/sizeof(int)); i++)
-   // printf("%d\n", arr[i]);
+  for(int i=0; i<( sizeof(arr)/sizeof(int)); i++)
+    printf("%d\n", arr[i]);
 
-  sort_bubble_char(dict, strlen(dict));
-  printf("%s\n", dict);
+  //sort_bubble_char(dict, strlen(dict));
+  //printf("%s\n", dict);
 
 }
 
